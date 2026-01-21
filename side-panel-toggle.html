@@ -27,10 +27,20 @@
         font-size: 16px;
         font-weight: 600;
       }
+      .toggle-button:hover{
+        background-color: black;
+        color: white;
+      }
 
       /* Side Panel */
       .side-panel {
         background: white;
+        position: fixed;
+        width: 50%;
+        height: 100vh;
+        right:0;
+        z-index: 1;
+        display: none;
       }
 
       /* Panel Header */
@@ -71,6 +81,16 @@
       .panel-content {
         padding: 20px;
       }
+
+
+      .side-panel.show{
+        display: block;
+      }
+      .side-panel.disable{
+        cursor: not-allowed;
+      }
+
+
     </style>
   </head>
   <body>
@@ -103,6 +123,19 @@
       </div>
     </div>
 
-    <script></script>
+    <script>
+const openbtn=document.getElementById("toggleButton")
+const sidepanel=document.getElementById("sidePanel")
+const closebtn=document.getElementById("closeButton")
+
+openbtn.addEventListener("click", function(){
+  sidepanel.classList.add("show");
+  sidepanel.classList.add("disble")
+})
+closebtn.addEventListener("click", function(){
+  sidepanel.classList.remove("show");
+})
+ 
+    </script>
   </body>
 </html>
