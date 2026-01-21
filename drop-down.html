@@ -23,13 +23,10 @@
         list-style: none;
         width: 100px;
         background-color: rgb(219, 219, 219);
+        display: none;
       }
-
-      #ul button {
-        display: flex;
-        flex-direction: column;
-        background-color: none;
-        border: none;
+      #ul.show{
+        display: block;
       }
 
       li {
@@ -49,6 +46,13 @@
       </ul>
     </div>
 
-    <script></script>
+    <script>
+      const btn=document.getElementById("btn")
+      const ul=document.getElementById("ul")
+
+      btn.addEventListener("click", function(){
+        ul.classList.toggle("show")
+      })
+    </script>
   </body>
 </html>
