@@ -10,19 +10,86 @@
         padding: 0;
       }
 
+      .image-box1{
+        position: relative;
+        width: 300px;
+}
       .image-box1 img {
-        width: 200px;
         object-fit: cover;
+        width: 200px;
       }
+
+      #text1{
+        position: absolute;
+        top:100px;
+        right:20px;
+        display: none;
+      }
+      #text1.show{
+        display: block;
+      }
+
+      #text2{
+        position: absolute;
+        top:0;
+        right: 50px;
+      }
+
+      #text3{
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      #image1{
+        position: absolute;
+        top: 100px;
+        left:400px;
+        max-width: 500px;
+      }
+      #image2{
+        position: absolute;
+        top: 400px;
+        left: 10px;
+        width: 300px;
+      }
+
 
     </style>
   </head>
   <body>
-    <div class="image-box1" id="image1">
-      <img src="imgs/bokchoy.png" alt="" />
-      <div class="text-display" id="textDisplay1"></div>
+
+  <div id="image1">
+    <div class="image-box1">
+      <img id="bokchoy" src="imgs/bokchoy.png" alt="" />
+      <div id="text1">it's a bok choy</div>
     </div>
+  </div>
+
+  <div id="image2">  
+    <div class="image-box1">
+      <img src="imgs/earth.png" alt="" />
+      <div id="text2">it's earth</div>
+    </div>
+  </div>
+
+  <div id="image3">
+  <div class="image-box1">
+      <img src="imgs/EMOJI.png" alt="" />
+      <div id="text3">it's an emoji</div>
+    </div>
+  </div>
+
     <script>
+const bokchoy=document.getElementById("bokchoy")
+const text1 = document.getElementById("text1")
+
+bokchoy.addEventListener("mouseenter", function(){
+  text1.classList.add("show");
+})
+bokchoy.addEventListener("mouseleave", function(){
+  text1.classList.remove("show");
+})
     </script>
   </body>
 </html>
