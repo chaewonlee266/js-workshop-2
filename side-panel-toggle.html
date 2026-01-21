@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close"
+    />
+    <title>Toggle Side Panel</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        padding: 20px;
+        background: #f5f5f5;
+      }
+
+      .toggle-button {
+        padding: 12px 24px;
+        color: rgb(0, 0, 0);
+        border: 2px black solid;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      /* Side Panel */
+      .side-panel {
+        background: white;
+      }
+
+      /* Panel Header */
+      .panel-header {
+        padding: 20px;
+        color: rgb(0, 0, 0);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        z-index: 1;
+      }
+
+      .panel-header h2 {
+        margin: 0;
+        font-size: 24px;
+      }
+
+      .close-button {
+        background: none;
+        border: none;
+        color: rgb(0, 0, 0);
+        font-size: 28px;
+        cursor: pointer;
+        padding: 0;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .close-button:hover {
+        border: 2px white solid;
+      }
+
+      /* Panel Content */
+      .panel-content {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Toggle Side Panel Example</h1>
+    <br />
+    <button class="toggle-button" id="toggleButton">Open Panel</button>
+
+    <!-- Side Panel -->
+    <div class="side-panel" id="sidePanel">
+      <div class="panel-header">
+        <h2>Panel Menu</h2>
+        <button class="close-button" id="closeButton">
+          <span class="material-symbols-outlined"> close </span>
+        </button>
+      </div>
+      <div class="panel-content">
+        Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus
+        ex sapien vitae pellentesque sem placerat. In id cursus mi pretium
+        tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.
+        Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis
+        massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper
+        vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra
+        inceptos himenaeos. Lorem ipsum dolor sit amet consectetur adipiscing
+        elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id
+        cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam
+        urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum
+        egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut
+        hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent
+        per conubia nostra inceptos himenaeos.
+      </div>
+    </div>
+
+    <script></script>
+  </body>
+</html>
